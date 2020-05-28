@@ -403,6 +403,29 @@ p {
     color: var(--color-light-grey);
 }
 
-..testimonial__speech-bubb a {
-    color: var(--color-black);
+
+/* contact */
+#contact {
+    background-color: var(--color-light-grey);
+}
+
+.contact__title, 
+.contact__email,
+.contact__rights {
+    color: var(--color-white);
+}
+
+.contact__title {
+    margin: 32px 0;
+}
+
+.contact__link {
+    font-size: var(--font-large);
+    margin: 24px 0;  
+}
+
+.contact__link i:hover {
+    transform: scale(1.1);
+    color: var(--color-white);
+    transition: all var(--animation-duration) ease-in;
 }
