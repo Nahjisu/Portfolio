@@ -23,23 +23,38 @@ navbarMenu.addEventListener('click', (event) => {
     if (link == null) {
         return;
     }
-
     scrollIntoView(link);
-
 });
 
 
 //Handle scrolling when tapping on the Contact
 const contactButton = document.querySelector('.home__contact');
 contactButton.addEventListener('click', (event) => {
-
     scrollIntoView('#contact');
 });
 
-function scrollIntoView(selector) {
 
+// Scrolling To be transparent
+const homeMenu = document.querySelector('.home__container');
+const homeHeight = homeMenu.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+    homeMenu.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({ behavior: "smooth" });
-
 }
 
