@@ -169,7 +169,6 @@ p {
 }
 
 /* Section common */
-
 .section {
     padding: 50px;
     text-align: center;
@@ -446,6 +445,27 @@ p {
     transform: scale(1.1);
     color: var(--color-white);
     transition: all var(--animation-duration) ease-in;
+}
+
+.arrow-up {
+
+   position: fixed; 
+   bottom: 50px;
+   right: 50px;
+   color: var(--color-white);
+   font-size: 50px;
+   background-color: black;
+   width: 70px;
+   height: 70px;
+   border-radius: 50%;
+   pointer-events: none;
+   opacity: 0;
+   transition: opacity 300ms ease-in;
+}
+
+.arrow-up.visible {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 @media screen and (max-width: 768px) {  

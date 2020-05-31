@@ -41,9 +41,25 @@ document.addEventListener('scroll', () => {
     homeMenu.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
+// Show arrow button whee Scrolling down
+const about = document.querySelector('#about');
+const aboutHeight = about.getBoundingClientRect().height;
+const arrowBtn = document.querySelector('.arrow-up');
 
+document.addEventListener('scroll' , () => {
+    
+    if(window.scrollY > homeHeight / 2) {
+        arrowBtn.classList.add('visible');
+    }else {
+        arrowBtn.classList.remove('visible');
+    }
 
+});
 
+// Arrow up click event
+arrowBtn.addEventListener('click', () => {
+    scrollIntoView('#home');
+});
 
 
 
