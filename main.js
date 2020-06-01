@@ -70,8 +70,15 @@ workBtnContainer.addEventListener('click', (e) => {
     if (filter == null) {
         return;
     }
-    projectContainer.classList.add('anim-out');
 
+    // Catagories Button when onclick selected
+    const active = document.querySelector('.categories__btn.selected');
+    if (active != null) {
+        active.classList.remove('selected');
+    }
+    e.target.classList.add('selected');
+
+    projectContainer.classList.add('anim-out');
     setTimeout(() => {
 
         projects.forEach((project) => {
@@ -86,6 +93,11 @@ workBtnContainer.addEventListener('click', (e) => {
     }, 300)
 
 });
+
+// Catagories Button when onclick active
+
+
+
 
 
 
