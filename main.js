@@ -23,7 +23,15 @@ navbarMenu.addEventListener('click', (event) => {
     if (link == null) {
         return;
     }
+    navMenu.classList.remove('open');
     scrollIntoView(link);
+});
+
+// Navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+const navMenu = document.querySelector('.navbar__menu');
+navbarToggleBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
 });
 
 
@@ -93,10 +101,6 @@ workBtnContainer.addEventListener('click', (e) => {
     }, 300)
 
 });
-
-// Catagories Button when onclick active
-
-
 
 
 
