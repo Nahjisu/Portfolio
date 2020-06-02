@@ -316,7 +316,7 @@ p {
     height: 24px;
     line-height: 24px;
     display: inline-block;
-    position: absolute;
+    position: relative;
     top: -20px;
     right: 16px;
     left: 4px;
